@@ -256,26 +256,45 @@ section.footer{
 
 /*Tablet*/
 @media (min-width: 768px) and (max-width: 1024px) {
+  /* Menú */
 
-/* Menú */
+  .menu__list__item{
+    margin-right: 1rem;
+  }
+  .title__profile {
+        width: 50%; 
+    }
+
 .menu__list__item{
   display: none;
 }
 .menu__list__item:last-child {
         display: block;
     }
+.skills__line, .hobbies__line {
+        justify-content: space-around;
+    }
+     .academic__courses__item__img img {
+        width: 80%; 
+        height: auto;
+    }
 }
 /*Mobile*/
 @media (min-width: 225px) and (max-width: 767px) {
 
 /*Menu*/
+body{
+  overflow-x: hidden;
+}
 .menu__header{
   margin-bottom: 20px;
 }
 .menu__list{
+  flex-direction: column;
+  align-items: center;
   width: 100%;
-  text-align: center;
 }
+
 
 .menu__list__item{
   display: none;
@@ -297,7 +316,7 @@ section.footer{
  .title__profile{
   width: 80%;
   height: auto;
-  margin-bottom: 20px;
+  margin: 0 auto;
  }
  .title__container{
   order: 1;
@@ -310,4 +329,26 @@ section.footer{
   justify-content: center;
   margin-top: 20px;
  }
+ .title, .about, .skills, .experience, .academic, .hobbies, .formcontato {
+        padding: 20px;
+        text-align: center;
+    }
+     .title__div, .about__container, .skills__line, .experience__box, .academic__courses, .hobbies__line {
+        flex-direction: column;
+    }
+    .academic__courses__item__img img {
+        width: 30%;
+        height: auto;
+    }
+    .about__paragraph, .skills__line, .experience__box, .formcontato__form {
+        width: 100%;
+        box-sizing: border-box;
+    }
+.formcontato__input, .formcontato__textarea {
+        width: calc(100% - 16px);
+    }
+
+ .about__paragraph, .skills__line, .experience__box {
+        padding: 0 20px;
+    }
 }
